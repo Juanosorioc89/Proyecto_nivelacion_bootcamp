@@ -29,10 +29,10 @@ input{
 }
 
 button{
-    width: 100%;
+    width: 50%;
     padding: 10px;
     margin: 10px 0;
-    border: 0;
+    border: 1;
     border-radius: 5px;
     background-color: blueviolet;
     color: aliceblue;
@@ -57,4 +57,37 @@ ul{
 li{
     padding: 10px;
     background-color: azure;
+}
+
+input:valid {
+    border-color: green; /* Cambia el color a verde cuando el campo está lleno y es válido */
+}
+
+/* Estilo cuando el campo es inválido o está vacío */
+input:invalid {
+    border-color: red; /* Cambia el color a rojo cuando el campo es inválido o está vacío */
+}
+
+/* Estilos básicos para el botón de tipo submit */
+input[type="submit"] {
+    background-color: #774caf; /* Color de fondo */
+    color: white; /* Color del texto */
+    padding: 12px 24px; /* Espaciado interno */
+    font-size: 16px; /* Tamaño de fuente */
+    border: none; /* Sin borde */
+    border-radius: 4px; /* Bordes redondeados */
+    cursor: pointer; /* Cambia el cursor al pasar por encima */
+    transition: background-color 0.3s ease; /* Transición para el efecto hover */
+}
+
+/* Efecto hover para el botón */
+input[type="submit"]:hover {
+    background-color: #45a049; /* Cambia el color de fondo al pasar el mouse */
+}
+
+/* Estilos adicionales opcionales */
+input[type="submit"]:active {
+    background-color: #3e8e41; /* Color al hacer clic */
+    box-shadow: 0 5px #666; /* Sombra al hacer clic */
+    transform: translateY(4px); /* Movimiento leve al hacer clic */
 }

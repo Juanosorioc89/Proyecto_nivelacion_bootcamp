@@ -4,13 +4,13 @@ const connection = mysql.createConnection({
     host: "localhost",
     user: "root",
     password: "",
-    database: "Curriculo"
+    database: "curriculo"
 });
 
-const registrarMateria = (nombreMateria, dia, profesor, cupo, fechaInicio, callback) => 
+const registrarMateria = (nombreMateria, dia, profesor, cupos, fechaInicio, callback) => 
     connection.query(
-        `INSERT INTO materias (nombreMateria, dia, profesor, cupo, fechaInicio) 
-        VALUES ('${nombreMateria}', '${dia}','${profesor}', '${cupo}', '${fechaInicio}')`,
+        `INSERT INTO materias (nombreMateria, dia, profesor, cupos, fechaInicio) 
+        VALUES ('${nombreMateria}', '${dia}','${profesor}', '${cupos}', '${fechaInicio}')`,
         (err, results) =>{
             if(err){
                 callback(err, null);
@@ -24,3 +24,8 @@ const registrarMateria = (nombreMateria, dia, profesor, cupo, fechaInicio, callb
 module.exports = {
     registrarMateria
 } 
+
+connection.connect((err) => {
+    if (err) throw err;
+    console.log('Conectado a la base de datos MySQL');
+});

@@ -8,21 +8,21 @@
 </head>
 <body>
     <h1>Registro de materias</h1>
-    <form action="" method="POST">
+    <form action="" method="POST" id="formularioMateria">
         <label for="nombreMateria">Nombre Materia</label>
-        <input type="text" name="nombreMateria" id="nombreMateria">
+        <input type="text" name="nombreMateria" id="nombreMateria" required>
         <br>
         <label for="dia">Día</label>
-        <input type="text" name="dia" id="dia">
+        <input type="text" name="dia" id="dia" required>
         <br>
         <label for="profesor">Profesor</label>
-        <input type="text" name="profesor" id="profesor">
+        <input type="text" name="profesor" id="profesor" required>
         <br>
-        <label for="cupo">Cupo</label>
-        <input type="number" name="cupo" id="cupo">
+        <label for="cupos">Cupos</label>
+        <input type="number" name="cupos" id="cupos" required>
         <br>
         <label for="fechaInicio">Fecha de inicio</label>
-        <input type="date" name="fechaInicio" id="fechaInicio">
+        <input type="date" name="fechaInicio" id="fechaInicio" required>
         <br>
     </form>
     <input type="submit" value="guardar" id="guardar">
